@@ -1,0 +1,19 @@
+<div class="p-4">
+  <form [formGroup]="formulario">
+    <div>
+      <label for="a">a =
+        <input id="a" formControlName="a" type="number">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label for="b">b =
+        <input id="b" formControlName="b" type="number">
+      </label>
+    </div>
+    <div>
+       <label class="mt-4">res = {{ resultadoTexto }}</label>
+    </div>
+    <button type="button" class="mt-4" (click)="aporb()">Multiplicar</button>
+  </form>
+</div>
