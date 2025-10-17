@@ -4,11 +4,12 @@ import { DistanciaComponent } from './formularios/distancia/distancia.component'
 import { AxbComponent } from './formularios/axb/axb.component';
 import { initFlowbite } from 'flowbite';
 import { NavbarComponent } from "./navbar/navbar.component";
+import { ZodiacoComponent } from "./formularios/zodiaco/zodiaco.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DistanciaComponent, AxbComponent, NavbarComponent],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

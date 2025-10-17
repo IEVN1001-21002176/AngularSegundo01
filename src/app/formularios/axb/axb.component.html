@@ -1,19 +1,21 @@
 <div class="p-4">
-  <form [formGroup]="formulario">
+  <form [formGroup]="formulario"  class="max-w-sm mx-auto w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-5 dark:bg-gray-700 dark:border-gray-600 dark:text-white ">
     <div>
-      <label for="a">a =
-        <input id="a" formControlName="a" type="number">
+      <label for="a">a:
+        <input id="a" formControlName="a" type="number"  class="block w-25 p-2 border rounded-lg text-xs">
       </label>
     </div>
     <br>
     <div>
-      <label for="b">b =
-        <input id="b" formControlName="b" type="number">
+      <label for="b">b:
+        <input id="b" formControlName="b" type="number"  class="block w-25 p-2 border rounded-lg text-xs">
       </label>
     </div>
+    <br>
     <div>
-       <label class="mt-4">res = {{ resultadoTexto }}</label>
+       <label >res = {{ resultadoTexto }}</label>
     </div>
-    <button type="button" class="mt-4" (click)="aporb()">Multiplicar</button>
+    <br>
+    <button type="button"  class="block w-25 p-2 border rounded-lg text-xs" (click)="aporb()">Multiplicar</button>
   </form>
 </div>

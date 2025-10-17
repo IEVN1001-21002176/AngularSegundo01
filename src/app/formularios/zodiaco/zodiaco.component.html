@@ -1,0 +1,125 @@
+<div class="flex flex-row justify-center gap-8">
+  <!-- NOMBRE -->
+  <form [formGroup]="formulario" (ngSubmit)="resultado()"
+    class="w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-5 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+    <h1 class="text-center mb-4">Datos Personales</h1>
+    <div class="mb-4">
+      <label class="block mb-2 text-sm font-medium">Nombre</label>
+      <input type="text" class="block w-full p-2 border rounded-lg text-xs"  formControlName="nombre"/>
+    </div>
+    <div class="mb-4">
+      <label class="block mb-2 text-sm font-medium">Apellido Paterno</label>
+      <input type="text" class="block w-full p-2 border rounded-lg text-xs" formControlName="apPaterno"/>
+    </div>
+    <div class="mb-4">
+      <label class="block mb-2 text-sm font-medium">Apellido Materno</label>
+      <input type="text" class="block w-full p-2 border rounded-lg text-xs" formControlName="apMaterno"/>
+    </div>
+
+    <!-- FECHA DE NACIMIENTO -->
+    <h1 class="text-center">Fecha de nacimiento</h1>
+    <div class="text-center grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Día</label>
+        <input
+          type="number"
+          id="dia"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs
+               focus:ring-blue-500 focus:border-blue-500
+               dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+               dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div>
+        <label
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mes</label>
+        <input
+          type="number"
+          id="mes"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs
+               focus:ring-blue-500 focus:border-blue-500
+               dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+               dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+      <div>
+        <label
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Año</label>
+        <input
+          type="number"
+          id="anio"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs
+               focus:ring-blue-500 focus:border-blue-500
+               dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+               dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" formControlName="anio">
+      </div>
+    </div>
+    <br>
+
+    <!-- GENERO -->
+    <h1 class="text-center">Sexo</h1>
+    <div class="flex items-center">
+      <input
+        id="masculino"
+        type="radio"
+        name="genero"
+        value="masculino"
+        class="w-4 h-4 appearance-none border border-gray-300 bg-gray-50 rounded-sm
+             checked:bg-black checked:border-black
+             focus:outline-none focus:ring-2 focus:ring-blue-500
+             dark:bg-gray-700 dark:border-gray-600 dark:checked:bg-blue-600 dark:checked:border-blue-600"
+        required />
+      <label for="masculino"
+        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+        Masculino
+      </label>
+    </div>
+
+    <div class="flex items-center">
+      <input
+        id="femenino"
+        type="radio"
+        name="genero"
+        value="femenino"
+        class="w-4 h-4 appearance-none border border-gray-300 bg-gray-50 rounded-sm
+             checked:bg-black checked:border-black
+             focus:outline-none focus:ring-2 focus:ring-blue-500
+             dark:bg-gray-700 dark:border-gray-600 dark:checked:bg-blue-600 dark:checked:border-blue-600"
+        required />
+      <label for="femenino"
+        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+        Femenino
+      </label>
+    </div>
+    <br>
+
+    <!-- BOTON -->
+    <button
+      type="submit"
+      class="text-black bg-white border-2 border-black hover:bg-gray-100
+         focus:ring-4 focus:outline-none focus:ring-gray-300
+         font-medium rounded-none text-sm w-full sm:w-auto px-5 py-2.5 text-center
+         dark:bg-white dark:text-black dark:border-black dark:hover:bg-gray-200">
+      Imprimir
+    </button>
+
+  </form>
+
+  <!--RESPUESTAS -->
+  <div
+    class="w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-5 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+    <div class="mb-4 text-center">
+      <h1>Hola:</h1>
+      <label id="respuesta-nombre" class="text-sm font-medium">{{ nombreRes }}</label>
+    </div>
+    <div class="mb-4 text-center">
+      <h1>Tienes:</h1>
+      <label id="respuesta-edad" class="text-sm font-medium">{{ edadRes }}</label>
+    </div>
+    <div class="mb-4 text-center">
+      <h1>Tu signo zodiacal es:</h1>
+      <label id="respuesta-zodiaco" class="text-sm font-medium">{{ zodiacoRes }}</label>
+      <br>
+      <img [src]="urlImagen" alt="Imagen" class="mx-auto mt-2 w-40 h-40">
+    </div>
+  </div>
+</div>
