@@ -7,11 +7,15 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { ZodiacoComponent } from "./formularios/zodiaco/zodiaco.component";
 import { TemhComponent } from "./tem/temh/temh.component";
 import { TempComponent } from "./tem/temp/temp.component";
+import { ContactoComponent } from "./Ludix/contacto/contacto/contacto.component";
+import { EstadisticasComponent } from "./Ludix/estadisticas/estadisticas.component";
+import { AdministradorLudixComponent } from "./Ludix/administrador-ludix/administrador-ludix.component";
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, TemhComponent, TempComponent],
+  imports: [RouterOutlet, NavbarComponent, ContactoComponent, EstadisticasComponent, AdministradorLudixComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
